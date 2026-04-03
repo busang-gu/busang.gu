@@ -365,21 +365,26 @@
         .inquiry-btn {
             display: inline-block;
             margin-top: 20px;
-            padding: 14px 60px;
+            padding: 16px 70px;
             background: #8cc63f;
             color: #0a0a0a;
             text-decoration: none;
             border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
+            font-size: 0.9rem;
+            font-weight: 700;
             letter-spacing: 0.05em;
             transition: all 0.3s ease;
+            animation: glow 2s ease-in-out infinite;
         }
 
         .inquiry-btn:hover {
             background: #9dd64f;
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(140, 198, 63, 0.3);
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 10px rgba(140, 198, 63, 0.3), 0 0 20px rgba(140, 198, 63, 0.1); }
+            50% { box-shadow: 0 0 20px rgba(140, 198, 63, 0.6), 0 0 40px rgba(140, 198, 63, 0.3), 0 0 60px rgba(140, 198, 63, 0.1); }
         }
 
         /* 푸터 */
