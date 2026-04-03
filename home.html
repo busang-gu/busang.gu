@@ -305,10 +305,28 @@
             color: #8cc63f;
         }
 
-        .community-link {
-            text-decoration: none;
-            color: inherit;
+        .community-btn {
             display: block;
+            text-align: center;
+            margin: 50px auto 0;
+            padding: 16px 50px;
+            background: rgba(140, 198, 63, 0.1);
+            border: 1px solid rgba(140, 198, 63, 0.3);
+            border-radius: 50px;
+            color: #8cc63f;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            max-width: 280px;
+        }
+
+        .community-btn:hover {
+            background: rgba(140, 198, 63, 0.2);
+            border-color: rgba(140, 198, 63, 0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(140, 198, 63, 0.15);
         }
 
         .service-card p {
@@ -548,6 +566,9 @@
                 어렵고 복잡한 이야기 대신, 누구나 바로 시작할 수 있도록.
             </p>
         </div>
+        <a href="https://open.kakao.com/o/gO6XjJoi" target="_blank" class="community-btn">
+            💬 커뮤니티 참여하기
+        </a>
     </section>
 
     <!-- 서비스 섹션 -->
@@ -569,13 +590,6 @@
                 <div class="service-icon">🏠</div>
                 <h3>내 집 마련</h3>
                 <p>투자 및 실거주 전략까지 고려하여<br>내 집 마련 로드맵을 함께 그립니다</p>
-            </div>
-            <div class="service-card">
-                <a href="#" class="community-link">
-                    <div class="service-icon">💬</div>
-                    <h3>커뮤니티 참여</h3>
-                    <p>같은 목표를 가진 사람들과 함께<br>재테크 정보를 나누는 카톡방</p>
-                </a>
             </div>
         </div>
     </section>
