@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>부상구 | 퍼스널 재테크</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Noto+Sans+KR:wght@200;300;400;500;700;900&display=swap');
 
         * {
             margin: 0;
@@ -239,6 +239,42 @@
             letter-spacing: 0.05em;
         }
 
+        /* ===== 차별화 카피 섹션 ===== */
+        .diff-section {
+            text-align: center;
+            padding: 120px 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .diff-section .main-copy {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .diff-section .sub-copy {
+            font-size: 0.8rem;
+            font-weight: 300;
+            color: rgba(255,255,255,0.6);
+            line-height: 2;
+        }
+
+        .diff-section .sub-copy strong {
+            color: #fff;
+            font-weight: 500;
+            text-decoration: underline;
+            text-decoration-color: #8cc63f;
+            text-underline-offset: 4px;
+        }
+
+        .diff-section .closing {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.35);
+            margin-top: 25px;
+        }
+
         /* ===== ABOUT 섹션 ===== */
         .about-content {
             text-align: center;
@@ -270,6 +306,30 @@
             height: 1px;
             background: rgba(140, 198, 63, 0.4);
             margin: 0 auto 30px;
+        }
+
+        .community-btn {
+            display: block;
+            text-align: center;
+            margin: 50px auto 0;
+            padding: 16px 50px;
+            background: rgba(140, 198, 63, 0.1);
+            border: 1px solid rgba(140, 198, 63, 0.3);
+            border-radius: 50px;
+            color: #8cc63f;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            max-width: 280px;
+        }
+
+        .community-btn:hover {
+            background: rgba(140, 198, 63, 0.2);
+            border-color: rgba(140, 198, 63, 0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(140, 198, 63, 0.15);
         }
 
         /* ===== 서비스 카드 섹션 ===== */
@@ -305,40 +365,112 @@
             color: #8cc63f;
         }
 
-        .community-btn {
-            display: block;
-            text-align: center;
-            margin: 50px auto 0;
-            padding: 16px 50px;
-            background: rgba(140, 198, 63, 0.1);
-            border: 1px solid rgba(140, 198, 63, 0.3);
-            border-radius: 50px;
-            color: #8cc63f;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            transition: all 0.3s ease;
-            max-width: 280px;
-        }
-
-        .community-btn:hover {
-            background: rgba(140, 198, 63, 0.2);
-            border-color: rgba(140, 198, 63, 0.6);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(140, 198, 63, 0.15);
-        }
-
         .service-card p {
             font-size: 0.72rem;
             color: rgba(255,255,255,0.5);
             line-height: 1.7;
         }
 
+        /* ===== 컨설팅 섹션 ===== */
+        .consulting-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .consulting-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 14px;
+            padding: 40px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .consulting-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 8px;
+            letter-spacing: 0.05em;
+        }
+
+        .consulting-price {
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #8cc63f;
+            margin-bottom: 25px;
+        }
+
+        .consulting-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .consulting-card ul li {
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.55);
+            line-height: 2;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .consulting-card ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #8cc63f;
+        }
+
+        .consulting-recommend {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .consulting-recommend h4 {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: #8cc63f;
+            margin-bottom: 10px;
+        }
+
+        .coming-soon-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10,10,10,0.85);
+            backdrop-filter: blur(3px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+        }
+
+        .coming-soon-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            letter-spacing: 0.2em;
+            color: rgba(140, 198, 63, 0.7);
+        }
+
+        /* ===== 후기 섹션 ===== */
+        .review-area {
+            position: relative;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         /* ===== CONTACT 섹션 ===== */
         #contact {
             text-align: center;
-            padding-bottom: 120px;
+            padding-bottom: 60px;
         }
 
         .contact-links {
@@ -380,10 +512,23 @@
             letter-spacing: 0.03em;
         }
 
+        /* ===== 문의하기 CTA ===== */
+        .cta-section {
+            text-align: center;
+            padding: 60px 40px 100px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .cta-subtitle {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.35);
+            margin-bottom: 20px;
+        }
+
         .inquiry-btn {
             display: inline-block;
-            margin-top: 20px;
-            padding: 16px 70px;
+            padding: 18px 80px;
             background: #8cc63f;
             color: #0a0a0a;
             text-decoration: none;
@@ -465,7 +610,19 @@
                 height: 160px;
             }
 
+            .diff-section {
+                padding: 80px 20px;
+            }
+
+            .diff-section .main-copy {
+                font-size: 1rem;
+            }
+
             .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .consulting-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -550,6 +707,16 @@
         </div>
     </section>
 
+    <!-- 차별화 카피 섹션 -->
+    <section class="diff-section fade-in">
+        <p class="main-copy">어려운 금융 용어로 포장하지 않습니다.</p>
+        <p class="sub-copy">
+            <strong>누구나 이해할 수 있는 언어</strong>로 설명하고<br>
+            지속적으로 <strong>실행할 수 있는 구조</strong>를 만드는 것<br>
+        </p>
+        <p class="closing">그것이 부상구가 하는 재테크입니다.</p>
+    </section>
+
     <!-- ABOUT 섹션 -->
     <section id="about" class="fade-in">
         <p class="section-title-sm">ABOUT</p>
@@ -594,6 +761,66 @@
         </div>
     </section>
 
+    <!-- 컨설팅 섹션 -->
+    <section id="consulting" class="fade-in">
+        <p class="section-title-sm">PRODUCT</p>
+        <h2 class="section-title">Product</h2>
+        <div class="consulting-grid">
+            <div class="consulting-card">
+                <h3>ONLINE</h3>
+                <p class="consulting-price">가격 준비 중</p>
+                <ul>
+                    <li>사전 진단 : 현재 재무 상태 파악</li>
+                    <li>1:1 코칭 : 줌(Zoom) 맞춤 컨설팅</li>
+                    <li>사후 관리 : 요약 리포트 + 카톡 Q&A</li>
+                </ul>
+                <div class="consulting-recommend">
+                    <h4>이런 분께 추천드려요!</h4>
+                    <ul>
+                        <li>재테크를 어디서부터 시작할지 모르는 분</li>
+                        <li>돈 관리 습관을 바꾸고 싶은 분</li>
+                        <li>투자를 시작하고 싶지만 막막한 분</li>
+                    </ul>
+                </div>
+                <div class="coming-soon-overlay">
+                    <span class="coming-soon-text">COMING SOON</span>
+                </div>
+            </div>
+            <div class="consulting-card">
+                <h3>OFFLINE</h3>
+                <p class="consulting-price">가격 준비 중</p>
+                <ul>
+                    <li>심층 분석 : 재무 상태 및 맞춤 전략 수립</li>
+                    <li>포트폴리오 설계 : 투자/저축 최적 배분</li>
+                    <li>내 집 마련 로드맵 : 실거주+투자 전략</li>
+                    <li>밀착 케어 : 카톡 Q&A + 월간 피드백</li>
+                </ul>
+                <div class="consulting-recommend">
+                    <h4>이런 분께 추천드려요!</h4>
+                    <ul>
+                        <li>온라인 너머 대면으로 깊이 배우고 싶은 분</li>
+                        <li>내 집 마련 계획을 구체화하고 싶은 분</li>
+                        <li>시행착오 없이 빠르게 자산을 늘리고 싶은 분</li>
+                    </ul>
+                </div>
+                <div class="coming-soon-overlay">
+                    <span class="coming-soon-text">COMING SOON</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 후기 섹션 -->
+    <section id="review" class="fade-in">
+        <p class="section-title-sm">REVIEW</p>
+        <h2 class="section-title">후기</h2>
+        <div class="review-area">
+            <div class="coming-soon-overlay" style="position:relative; min-height:150px; border-radius:14px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08);">
+                <span class="coming-soon-text">COMING SOON</span>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACT 섹션 -->
     <section id="contact" class="fade-in">
         <p class="section-title-sm">GET IN TOUCH</p>
@@ -607,9 +834,14 @@
                 <span class="contact-icon">✉️</span>
                 <span>busang_gu@naver.com</span>
             </a>
-            <a href="https://open.kakao.com/o/spxF5xgg" target="_blank" class="inquiry-btn">문의하기</a>
         </div>
     </section>
+
+    <!-- 문의하기 CTA -->
+    <div class="cta-section fade-in">
+        <p class="cta-subtitle">더 궁금한 점이 있다면 편하게 문의해주세요.</p>
+        <a href="https://open.kakao.com/o/spxF5xgg" target="_blank" class="inquiry-btn">문의하기</a>
+    </div>
 
     <!-- 푸터 -->
     <footer>
